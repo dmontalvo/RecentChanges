@@ -1,0 +1,25 @@
+$(document).ready(function()
+                  {
+		      var widget_divs = $(".ol_widget");
+		      $.each(widget_divs, function(index, value) { 
+			      var classes = $(value).attr('class');
+			      var x = classes.split(" ");
+			      var olid;
+			      var i;
+				  for (i = 0; i < x.length; i++) {
+				      if (x[i].substring(0,2) == 'OL') {
+					  olid = x[i];
+					  var url = 'http://openlibrary.org/books/' + olid + '.json?callback=widgetcallback';
+					  $.ajax({url: url, dataType: 'script'});
+					      }
+				  }
+			  });
+
+                  }
+                  )
+
+    function widgetcallback(data) {
+    console.log(data.authors[0].key);
+    console.log(data.title);
+    console.log(data.covers[0]);
+}

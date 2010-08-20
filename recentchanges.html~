@@ -1,0 +1,11 @@
+<HTML>
+<head>
+<script src="http://openlibrary.org/static/upstream/js/jquery-1.3.2.min.js"></script>
+<script src="http://home.us.archive.org/~dmontalvo/recent_changes.js"></script>
+</head>
+<body>
+<div>OpenLibrary Recent Changes</div>
+<div>Next refresh in: <span id="refresh">60</span></div>
+<div id="container">xxx</div>
+</body>
+</HTML>
